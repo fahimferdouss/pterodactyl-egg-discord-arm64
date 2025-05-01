@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Ensure the home directory has the correct permissions
+chmod -R 755 /home/container
+
 MODIFIED_STARTUP=`eval echo $(echo ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g')`
 
 cd /home/container
