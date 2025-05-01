@@ -3,6 +3,9 @@ ARG NODE_VERSION=lts
 # Use the ARM64-compatible Node.js image
 FROM arm64v8/node:$NODE_VERSION-alpine
 
+# Set environment variable to disable REPL history
+ENV NODE_NO_READLINE=1
+
 RUN apk update && \
     apk upgrade && \
     apk add --no-cache curl bash
