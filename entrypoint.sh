@@ -13,4 +13,4 @@ yarn install --check-cache --production
 
 echo "-- Server started, waiting for ${STARTUP_FILE}..."
 
-${MODIFIED_STARTUP}
+exec ${MODIFIED_STARTUP}
